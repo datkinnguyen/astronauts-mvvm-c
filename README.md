@@ -22,6 +22,9 @@ This application is written in Swift, following a mix of MVVM and Coordinator pa
 - Deployment Target: iOS 13+
 - Xcode 13.2.1
 - Swift 5.5.2
+ 
+ ## Instalaltion
+ - There's no libraries/pods, just download the source code or check out using git, you should be able to open Xcode project and Run right away.
 
 ## About the app
 ![Home page](https://i.ibb.co/wzwVy8F/Simulator-Screen-Shot-i-Phone-13-Pro-Max-2022-01-14-at-07-15-59.png)
