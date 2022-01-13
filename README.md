@@ -1,4 +1,4 @@
-# Astronaust
+# Astronauts
 
 This is a demo project for a Technical Assessment. Details are listed below:
 
