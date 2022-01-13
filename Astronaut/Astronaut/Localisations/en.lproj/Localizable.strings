@@ -1,0 +1,12 @@
+/* 
+  Localizable.strings
+  Astronaut
+
+  Created by Danny Nguyen on 14/1/2022.
+  
+*/
+
+"error" = "Error";
+"astronauts" = "Astronauts";
+"ok" = "OK";
+"date_of_birth" = "Date of birth: %@";
