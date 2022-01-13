@@ -71,6 +71,8 @@
 		3002B766279097BA0006D6C7 /* AstronautsInteractorMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3002B763279097BA0006D6C7 /* AstronautsInteractorMock.swift */; };
 		3002B76B2790A0480006D6C7 /* AstronautsRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3002B7692790A0470006D6C7 /* AstronautsRepositoryTests.swift */; };
 		3002B76C2790A0480006D6C7 /* AstronautDetailViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3002B76A2790A0470006D6C7 /* AstronautDetailViewModelTests.swift */; };
+		303B765D2790C5C500357ECB /* SortAstronaut.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303B765C2790C5C500357ECB /* SortAstronaut.swift */; };
+		303B765E2790C5CD00357ECB /* SortAstronaut.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303B765C2790C5C500357ECB /* SortAstronaut.swift */; };
 		307963382790A92D005919DE /* UIView+Decoration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 307963372790A92D005919DE /* UIView+Decoration.swift */; };
 		3079633B2790AA2C005919DE /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3079633A2790AA2C005919DE /* Constants.swift */; };
 		3079633C2790AC40005919DE /* String+localized.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3002B737279079330006D6C7 /* String+localized.swift */; };
@@ -135,6 +137,7 @@
 		3002B763279097BA0006D6C7 /* AstronautsInteractorMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AstronautsInteractorMock.swift; sourceTree = "<group>"; };
 		3002B7692790A0470006D6C7 /* AstronautsRepositoryTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AstronautsRepositoryTests.swift; sourceTree = "<group>"; };
 		3002B76A2790A0470006D6C7 /* AstronautDetailViewModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AstronautDetailViewModelTests.swift; sourceTree = "<group>"; };
+		303B765C2790C5C500357ECB /* SortAstronaut.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortAstronaut.swift; sourceTree = "<group>"; };
 		307963372790A92D005919DE /* UIView+Decoration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Decoration.swift"; sourceTree = "<group>"; };
 		3079633A2790AA2C005919DE /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -222,6 +225,7 @@
 			isa = PBXGroup;
 			children = (
 				3002B6E627904D250006D6C7 /* Astronaut.swift */,
+				303B765C2790C5C500357ECB /* SortAstronaut.swift */,
 				3002B72127905F240006D6C7 /* AstronautsResponse.swift */,
 			);
 			path = Models;
@@ -542,6 +546,7 @@
 				3002B70D2790553E0006D6C7 /* JSONParameterEncoder.swift in Sources */,
 				3002B7092790553E0006D6C7 /* ParameterEncoding.swift in Sources */,
 				3002B7532790866F0006D6C7 /* UIViewController+Alert.swift in Sources */,
+				303B765D2790C5C500357ECB /* SortAstronaut.swift in Sources */,
 				3002B7072790553E0006D6C7 /* EndPointType.swift in Sources */,
 				3002B6AB279034F50006D6C7 /* AstronautsViewController.swift in Sources */,
 				3002B6E027904AFF0006D6C7 /* AstronautListViewModel.swift in Sources */,
@@ -596,6 +601,7 @@
 				3002B72327905F240006D6C7 /* AstronautsResponse.swift in Sources */,
 				3002B70A2790553E0006D6C7 /* ParameterEncoding.swift in Sources */,
 				3002B766279097BA0006D6C7 /* AstronautsInteractorMock.swift in Sources */,
+				303B765E2790C5CD00357ECB /* SortAstronaut.swift in Sources */,
 				3002B765279097BA0006D6C7 /* StubModelFactory.swift in Sources */,
 				3002B6E527904C420006D6C7 /* Observable.swift in Sources */,
 				3002B7122790553E0006D6C7 /* NetworkError.swift in Sources */,

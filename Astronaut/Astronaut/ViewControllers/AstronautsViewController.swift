@@ -7,16 +7,6 @@
 
 import UIKit
 
-enum SortBy : String {
-    case name
-    case nationality
-}
-
-enum SortType : String {
-    case AZ
-    case ZA
-}
-
 final class AstronautsViewController : UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
