@@ -13,25 +13,66 @@ struct Astronaut: Codable {
     let name: String?
     let status: AstronautStatus?
     let type: AstronautType?
-    let dateOfBirth: String?
-    let dateOfDeath: String?
+    let dateOfBirth: Date?
+    let dateOfDeath: Date?
     let nationality: String?
     let bio: String?
     let profileImage: String?
     let profileImageThumbnail: String?
-    let firstFlight: String?
-    let lastFlight: String? //1991-10-02T05:59:38Z",
+    let firstFlight: Date?
+    let lastFlight: Date?
     
-    // Minimum: name, nationality and profile_image_thumbnail
+    init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        self.id = try container.decode(Int.self, forKey: .id)
+        self.url = try container.decode(String?.self, forKey: .url)
+        self.name = try container.decode(String?.self, forKey: .name)
+        self.status = try container.decode(AstronautStatus?.self, forKey: .status)
+        self.type = try container.decode(AstronautType?.self, forKey: .type)
+        
+        // "1963-03-11"
+        let yyyyMMddDateFormatter = DateFormatter.yyyyMMdd
+        let dateOfBirthString = try container.decode(String?.self, forKey: .dateOfBirth)
+        if let dateOfBirthString = dateOfBirthString {
+            self.dateOfBirth = yyyyMMddDateFormatter.date(from: dateOfBirthString) ?? nil
+        } else {
+            self.dateOfBirth = nil
+        }
+        
+        let dateOfDeathString = try container.decode(String?.self, forKey: .dateOfDeath)
+        if let dateOfDeathString = dateOfDeathString {
+            self.dateOfDeath = yyyyMMddDateFormatter.date(from: dateOfDeathString) ?? nil
+        } else {
+            self.dateOfDeath = nil
+        }
+        
+        self.nationality = try container.decode(String?.self, forKey: .nationality)
+        self.bio = try container.decode(String?.self, forKey: .bio)
+        self.profileImage = try container.decode(String?.self, forKey: .profileImage)
+        self.profileImageThumbnail = try container.decode(String?.self, forKey: .profileImageThumbnail)
+        
+        // 1991-10-02T05:59:38Z",
+        let iso8601Formatter = DateFormatter.iso8601Full
+        let firstFlightString = try container.decode(String?.self, forKey: .firstFlight)
+        if let firstFlightString = firstFlightString {
+            self.firstFlight = iso8601Formatter.date(from: firstFlightString) ?? nil
+        } else {
+            self.firstFlight = nil
+        }
+        
+        let lastFlightString = try container.decode(String?.self, forKey: .lastFlight)
+        if let lastFlightString = lastFlightString {
+            self.lastFlight = iso8601Formatter.date(from: lastFlightString) ?? nil
+        } else {
+            self.lastFlight = nil
+        }
+    }
+    
+    enum CodingKeys: String, CodingKey {
+        case id, url, name, status, type, dateOfBirth, dateOfDeath, nationality, bio, profileImage, profileImageThumbnail, firstFlight, lastFlight
+    }
     
 }
-
-//extension Astronaut: Decodable {
-//    enum CodingKeys: String, CodingKey {
-//        case id, url, name, status, type, dateOfBirth, dateOfDeath, nationality, bio, profileImage, profileImageThumbnail, firstFlight, lastFlight
-//    }
-//}
-
 
 struct AstronautStatus: Codable {
     let id: Int!
@@ -43,47 +84,4 @@ struct AstronautType: Codable {
     let id: Int!
     let name: String?
 }
-
-
-/**
- "id": 276,
- "url": "http://spacelaunchnow.me/api/ll/2.2.0/astronaut/276/",
- "name": "Franz Viehböck",
- "status": {
- "id": 2,
- "name": "Retired"
- },
- "type": {
- "id": 2,
- "name": "Government"
- },
- "date_of_birth": "1960-08-24",
- "date_of_death": null,
- "nationality": "Austrian",
- "bio": "Franz Artur Viehböck (born August 24, 1960 in Vienna) is an Austrian electrical engineer, and was Austria's first cosmonaut. He was titulated „Austronaut“ by his country's media. He visited the Mir space station in 1991 aboard Soyuz TM-13, returning aboard Soyuz TM-12 after spending just over a week in space.",
- "twitter": null,
- "instagram": null,
- "wiki": "https://en.wikipedia.org/wiki/Franz_Viehb%C3%B6ck",
- "agency": {
- "id": 8,
- "url": "http://spacelaunchnow.me/api/ll/2.2.0/agencies/8/",
- "name": "Austrian Space Agency",
- "featured": false,
- "type": "Government",
- "country_code": "AUT",
- "abbrev": "ALR",
- "description": "The Austrian Space Agency was founded in 1972 and joined the ESA as a member in 1987. In 2005, control of the ALR was transferred to the Austrian Agency for Aerospace. They coordinated the first flight of an Austrian in space with a Soyuz launch in 1990.",
- "administrator": "Andreas Geisler",
- "founding_year": "1972",
- "launchers": "",
- "spacecraft": "Spacelab | GALILEO",
- "parent": null,
- "image_url": null
- },
- "profile_image": "https://spacelaunchnow-prod-east.nyc3.cdn.digitaloceanspaces.com/media/astronaut_images/franz2520viehb25c325b6ck_image_20181201223901.jpg",
- "profile_image_thumbnail": "https://spacelaunchnow-prod-east.nyc3.cdn.digitaloceanspaces.com/media/default/cache/54/57/5457ce75acb7b188196eb442e3f17b64.jpg",
- "last_flight": "1991-10-02T05:59:38Z",
- "first_flight": "1991-10-02T05:59:38Z"
- 
- */
 

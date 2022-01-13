@@ -14,14 +14,14 @@ class AstronautViewModel {
     let url: String?
     let status: AstronautStatus?
     let type: AstronautType?
-    let dateOfBirth: String?
-    let dateOfDeath: String?
+    let dateOfBirth: Date?
+    let dateOfDeath: Date?
     let nationality: String?
     let bio: String?
     let profileImage: String?
     let profileImageThumbnail: String?
-    let firstFlight: String?
-    let lastFlight: String? //1991-10-02T05:59:38Z",
+    let firstFlight: Date?
+    let lastFlight: Date?
     
     init(astronaut: Astronaut!) {
         self.id = astronaut.id

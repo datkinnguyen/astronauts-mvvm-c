@@ -58,8 +58,14 @@ private extension AstronautDetailViewController {
         nameLabel.text = model?.name
         nationalityLabel.text = model?.nationality
         bioLabel.text = model?.bio
-        dobLabel.text = String.localizedStringWithFormat("date_of_birth".localized, model?.dateOfBirth ?? "")
         thumbnailImageView.imageFromUrl(urlString: model?.profileImageThumbnail, placeHolderImage: nil)
+        
+        if let dateOfBirth = model?.dateOfBirth {
+            let dateString = DateFormatter.currentLocaleFormatter.string(from: dateOfBirth)
+            dobLabel.text = String.localizedStringWithFormat("date_of_birth".localized, dateString)
+        } else {
+            dobLabel.text = ""
+        }
     }
 }
 

@@ -73,6 +73,8 @@
 		3002B76C2790A0480006D6C7 /* AstronautDetailViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3002B76A2790A0470006D6C7 /* AstronautDetailViewModelTests.swift */; };
 		303B765D2790C5C500357ECB /* SortAstronaut.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303B765C2790C5C500357ECB /* SortAstronaut.swift */; };
 		303B765E2790C5CD00357ECB /* SortAstronaut.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303B765C2790C5C500357ECB /* SortAstronaut.swift */; };
+		303B76602790CAA900357ECB /* DateFormatter+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303B765F2790CAA900357ECB /* DateFormatter+Extension.swift */; };
+		303B76612790CF3B00357ECB /* DateFormatter+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303B765F2790CAA900357ECB /* DateFormatter+Extension.swift */; };
 		307963382790A92D005919DE /* UIView+Decoration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 307963372790A92D005919DE /* UIView+Decoration.swift */; };
 		3079633B2790AA2C005919DE /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3079633A2790AA2C005919DE /* Constants.swift */; };
 		3079633C2790AC40005919DE /* String+localized.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3002B737279079330006D6C7 /* String+localized.swift */; };
@@ -138,6 +140,7 @@
 		3002B7692790A0470006D6C7 /* AstronautsRepositoryTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AstronautsRepositoryTests.swift; sourceTree = "<group>"; };
 		3002B76A2790A0470006D6C7 /* AstronautDetailViewModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AstronautDetailViewModelTests.swift; sourceTree = "<group>"; };
 		303B765C2790C5C500357ECB /* SortAstronaut.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortAstronaut.swift; sourceTree = "<group>"; };
+		303B765F2790CAA900357ECB /* DateFormatter+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormatter+Extension.swift"; sourceTree = "<group>"; };
 		307963372790A92D005919DE /* UIView+Decoration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Decoration.swift"; sourceTree = "<group>"; };
 		3079633A2790AA2C005919DE /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -351,6 +354,7 @@
 				3002B74C27907F810006D6C7 /* CellConfigurable.swift */,
 				3002B755279089980006D6C7 /* LoadingDelegate.swift */,
 				3002B74F279080650006D6C7 /* UIImageView+LoadImage.swift */,
+				303B765F2790CAA900357ECB /* DateFormatter+Extension.swift */,
 				307963372790A92D005919DE /* UIView+Decoration.swift */,
 			);
 			path = Supporting;
@@ -565,6 +569,7 @@
 				3002B72E2790675C0006D6C7 /* AppCoordinator.swift in Sources */,
 				3002B74D27907F810006D6C7 /* CellConfigurable.swift in Sources */,
 				3002B6A7279034F50006D6C7 /* AppDelegate.swift in Sources */,
+				303B76602790CAA900357ECB /* DateFormatter+Extension.swift in Sources */,
 				3002B70F2790553E0006D6C7 /* NetworkResponseError.swift in Sources */,
 				3002B74A27907F240006D6C7 /* AstronautTableCell.swift in Sources */,
 				3002B73527906A4B0006D6C7 /* UIViewController+Instantiate.swift in Sources */,
@@ -607,6 +612,7 @@
 				3002B7122790553E0006D6C7 /* NetworkError.swift in Sources */,
 				3002B718279056C10006D6C7 /* NetworkService.swift in Sources */,
 				3002B70C2790553E0006D6C7 /* URLParameterEncoder.swift in Sources */,
+				303B76612790CF3B00357ECB /* DateFormatter+Extension.swift in Sources */,
 				3079633D2790AC5A005919DE /* LoadingDelegate.swift in Sources */,
 				3002B75A27908C5F0006D6C7 /* AstronautDetailViewModel.swift in Sources */,
 				3002B76B2790A0480006D6C7 /* AstronautsRepositoryTests.swift in Sources */,
