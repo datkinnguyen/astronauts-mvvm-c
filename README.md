@@ -16,7 +16,7 @@ This is a demo project for a Technical Assessment. Details are listed below:
 -   iOS – Min iOS (13), Xcode (12.X) and UIKit
  
  ----
-This application is written in Swift, following a mix of MVVM and Coordinator pattern. MVVM makes make the source code easier to read and most importantly easier to unit test. Coordinator pattern is used to help with navigation. 
+This application is written in Swift, following a mix of MVVM and Coordinator patterns. MVVM makes the source code easier to read and to unit test. Coordinator pattern helps with navigation and router of the app.
 
 ## Implementation details
 - Deployment Target: iOS 13+
@@ -34,17 +34,17 @@ This application is written in Swift, following a mix of MVVM and Coordinator pa
 - First screen is List Astronauts with tableView and pull-to-refresh
 - Able to sort astronauts by name A->Z and Z->A
 - Tapping one astronaut cell will open Astronaut Detail screen
-- There are network requests in both screens to load list and load detail. If network requests fail, error message shows up on screen
-- Images are loaded asynchronously in the background, and are rounded on the UI
-- Detail screen supports scrolling to support long content
+- There are network requests in both screens to load content. If network requests fail, an error message shows up on screen
+- Images are loaded asynchronously in the background, and are corner-rounded on the UI
+- Detail screen is scrollable to support long content
 - App is localisation-ready
-- Comes with App Icon (credit icon to https://dribbble.com/shots/12071145-Astronaut-Icon)
+- Comes with App Icon (icon credit to https://dribbble.com/shots/12071145-Astronaut-Icon)
 
 ## Highlights
 - Source code is organised as per MVVM/Coordinator patterns which group by layer: Coordinator, Network, View, Model, ViewModel
 - Protocol-oriented is followed wherever possible
 - Binding between ViewModel and ViewController using a simple Observable pattern
-- Each ViewController has its own Storyboard to better manage and avoid merging conflict in the future
+- Each ViewController has its own Storyboard to better manage and avoid merging conflicts in the future
 - ViewModels and Repository are unit-tested, coverage of project: 52.5%
 - Custom-built Network Layer handling requests, response and error parsing.
  
